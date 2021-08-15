@@ -62,3 +62,29 @@
 .btn-container-primary {
   width: 20%;
 }
+.profile-container {
+  display: flex;
+  justify-content: center;
+}
+.image-container {
+  width: 200;
+  height: 200;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  text-align: center;
+}
+.card-name,
+.card-age,
+.card-mail,
+.card-desc {
+  color: #555;
+}

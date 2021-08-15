@@ -6,6 +6,8 @@ import Users from './Users';
 import CreateUsers from './CreateUsers';
 import { UserProvider } from './UserContext';
 import EditUsers from './EditUser';
+import Profile from './Profile';
+import EditProfile from './EditProfile';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
               <Route path="/users" component={Users} exact />
               <Route path="/create-user" component={CreateUsers} exact />
               <Route path="/edit-user/:id" component={EditUsers} exact />
+              <Route path="/profile/:id" component={Profile} exact />
+              <Route path="/edit-profile/:id" component={EditProfile} exact />
             </UserProvider>
           </Switch>
         </div>

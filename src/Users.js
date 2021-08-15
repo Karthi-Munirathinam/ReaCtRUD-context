@@ -34,9 +34,10 @@ function Users(props) {
                             <tbody>
                                 {userData.map((obj, index) => {
                                     return (
+
                                         <tr key={index}>
                                             <td>{index + 1}</td>
-                                            <td>{obj.name}</td>
+                                            <td><Link to={`/profile/${index}`}>{obj.name}</Link></td>
                                             <td>{obj.age}</td>
                                             <td>{obj.imgurl}</td>
                                             <td><div className="btn-containers mt-2"><Link to={`/edit-user/${index}`} className=" btn btn-sm btn-primary">Edit</Link><button onClick={() => handledelete(index)} className=" btn btn-sm btn-danger">Delete</button></div></td>
