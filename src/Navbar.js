@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
     return (
         <nav className="row navbar-cont">
-            <div className="col-md-4 .title-nav">
+            <div className="col-md-4 title-nav">
                 <h3 className="title">ReaCtRUD</h3>
             </div>
             <div className="col-md-8 buttons-container">
