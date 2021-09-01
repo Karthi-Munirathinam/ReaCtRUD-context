@@ -18,11 +18,11 @@
   color: rgb(255, 255, 255);
 }
 .btn-color {
-  color: #ffffffa6;
+  color: #ffffff;
   background-color: transparent;
 }
 .btn-color:hover {
-  background-color: #ff25259d;
+  background-color: #ff2525;
   border: none;
 }
 .App {
@@ -87,4 +87,34 @@
 .card-mail,
 .card-desc {
   color: #555;
+}
+@media (max-width: 769px) {
+  .navbar-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .buttons-container {
+    justify-content: space-around;
+  }
+  .title-nav {
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .navbar-container {
+    background-color: #ffe53b;
+    background-image: linear-gradient(30deg, #ff2525 74%, #ff2525 74%);
+    box-shadow: 0 3px 4px #ff7b0077;
+  }
+  .btn-color {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  .btn-color:hover {
+    background-color: #ffbb00;
+    color: #ff2525;
+    border: none;
+  }
 }

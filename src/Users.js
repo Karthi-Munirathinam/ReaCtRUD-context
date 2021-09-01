@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import UserContext from './UserContext';
 
-function Users(props) {
+function Users() {
     const { userData, setUserData } = useContext(UserContext);
 
     let handledelete = (index) => {
@@ -18,14 +18,14 @@ function Users(props) {
             <h3 className="page-title mb-4">Users</h3>
 
             <div className="table-responsive-lg" >
-                <table className="table table-info table-hover mb-0" width="100%">
+                <table className="table table-info table-hover mb-0">
                     <thead>
                         <tr>
-                            <th scope="col" className="text-center">ID</th>
-                            <th scope="col" className="text-center">Name</th>
-                            <th scope="col" className="text-center">Age</th>
-                            <th scope="col" className="text-center">ImageUrl</th>
-                            <th scope="col" className="text-center">Actions</th>
+                            <th className="text-center">ID</th>
+                            <th className="text-center">Name</th>
+                            <th className="text-center">Age</th>
+                            <th className="text-center">ImageUrl</th>
+                            <th className="text-center">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,7 +33,7 @@ function Users(props) {
                             return (
 
                                 <tr key={index}>
-                                    <th scope="row">{index + 1}</th>
+                                    <td>{index + 1}</td>
                                     <td><Link to={`/profile/${index}`}>{obj.name}</Link></td>
                                     <td>{obj.age}</td>
                                     <td>{obj.imgurl}</td>
@@ -41,22 +41,19 @@ function Users(props) {
                                 </tr>
                             )
                         })}
-
-
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th scope="col" className="text-center">ID</th>
-                            <th scope="col" className="text-center">Name</th>
-                            <th scope="col" className="text-center">Age</th>
-                            <th scope="col" className="text-center">ImageUrl</th>
-                            <th scope="col" className="text-center">Actions</th>
+                            <th className="text-center">ID</th>
+                            <th className="text-center">Name</th>
+                            <th className="text-center">Age</th>
+                            <th className="text-center">ImageUrl</th>
+                            <th className="text-center">Actions</th>
                         </tr>
                     </tfoot>
 
                 </table>
             </div>
-
         </div >
     )
 }
