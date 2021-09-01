@@ -24,27 +24,27 @@ export default function EditUsers(props) {
             <h3 className="page-title mb-4">Edit Existing User</h3>
             <form onSubmit={handleSubmit}>
                 <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <label htmlFor="name">Name</label>
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} id="name" className="form-control" />
                     </div>
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <label htmlFor="age">Age</label>
                         <input type="number" value={age} onChange={(e) => setAge(e.target.value)} id="age" className="form-control" />
                     </div>
                 </div>
                 <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <label htmlFor="email">E-mail</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email" className="form-control" />
                     </div>
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <label htmlFor="imgurl">Image Url</label>
                         <input type="text" value={imgurl} onChange={(e) => setImgurl(e.target.value)} id="imgurl" className="form-control" />
                     </div>
                 </div>
                 <div className="row mb-4">
-                    <div className="col-12">
+                    <div className="col-lg-12">
                         <label htmlFor="description">Description</label>
                         <textarea type="text" value={description} onChange={(e) => setDescription(e.target.value)} id="description" className="form-control" rows="3"></textarea>
                     </div>

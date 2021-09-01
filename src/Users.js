@@ -17,53 +17,47 @@ function Users(props) {
         <div>
             <h3 className="page-title mb-4">Users</h3>
 
+            <div className="table-responsive-lg" >
+                <table className="table table-info table-hover mb-0" width="100%">
+                    <thead>
+                        <tr>
+                            <th scope="col" className="text-center">ID</th>
+                            <th scope="col" className="text-center">Name</th>
+                            <th scope="col" className="text-center">Age</th>
+                            <th scope="col" className="text-center">ImageUrl</th>
+                            <th scope="col" className="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {userData.map((obj, index) => {
+                            return (
 
-            <div className="card">
-                <div className="row">
-                    <div className="col-12 ">
-                        <table className="table table-info table-hover mb-0">
-                            <thead>
-                                <tr>
-                                    <th className="text-center">ID</th>
-                                    <th className="text-center">Name</th>
-                                    <th className="text-center">Age</th>
-                                    <th className="text-center">ImageUrl</th>
-                                    <th className="text-center">Actions</th>
+                                <tr key={index}>
+                                    <th scope="row">{index + 1}</th>
+                                    <td><Link to={`/profile/${index}`}>{obj.name}</Link></td>
+                                    <td>{obj.age}</td>
+                                    <td>{obj.imgurl}</td>
+                                    <td><div className="btn-containers mt-2"><Link to={`/edit-user/${index}`} className=" btn btn-sm btn-primary">Edit</Link><button onClick={() => handledelete(index)} className=" btn btn-sm btn-danger">Delete</button></div></td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                {userData.map((obj, index) => {
-                                    return (
-
-                                        <tr key={index}>
-                                            <td>{index + 1}</td>
-                                            <td><Link to={`/profile/${index}`}>{obj.name}</Link></td>
-                                            <td>{obj.age}</td>
-                                            <td>{obj.imgurl}</td>
-                                            <td><div className="btn-containers mt-2"><Link to={`/edit-user/${index}`} className=" btn btn-sm btn-primary">Edit</Link><button onClick={() => handledelete(index)} className=" btn btn-sm btn-danger">Delete</button></div></td>
-                                        </tr>
-                                    )
-                                })}
+                            )
+                        })}
 
 
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th className="text-center">ID</th>
-                                    <th className="text-center">Name</th>
-                                    <th className="text-center">Age</th>
-                                    <th className="text-center">ImageUrl</th>
-                                    <th className="text-center">Actions</th>
-                                </tr>
-                            </tfoot>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="col" className="text-center">ID</th>
+                            <th scope="col" className="text-center">Name</th>
+                            <th scope="col" className="text-center">Age</th>
+                            <th scope="col" className="text-center">ImageUrl</th>
+                            <th scope="col" className="text-center">Actions</th>
+                        </tr>
+                    </tfoot>
 
-                        </table>
-                    </div>
-                </div>
+                </table>
             </div>
 
-
-        </div>
+        </div >
     )
 }
 
